@@ -13,10 +13,10 @@ public interface UserDao {
 
     /**
      * 注册功能
-     * @param user
-     * @return
+     * @param user  注册用户的信息
+     * @return      返回注册用户的id
      */
-    public int register(User user);
+    int register(User user);
 
 
 }

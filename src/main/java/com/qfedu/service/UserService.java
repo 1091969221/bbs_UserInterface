@@ -17,5 +17,5 @@ public interface UserService {
      * @param user
      * @return
      */
-    public Boolean getRegister(User user);
+    int getRegister(User user);
 }

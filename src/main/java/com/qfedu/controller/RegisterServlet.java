@@ -25,10 +25,9 @@ public class RegisterServlet extends HttpServlet {
 
         user.setName(r_username);
         user.setPassword(r_password);
-        Boolean register = userService.getRegister(user);
+        int register = userService.getRegister(user);
 
-
-        request.setAttribute("state",register);
+        request.setAttribute("registerId",register);
         request.getRequestDispatcher("").forward(request,response);
     }
 }

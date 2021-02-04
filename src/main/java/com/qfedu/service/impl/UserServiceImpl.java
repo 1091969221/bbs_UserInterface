@@ -25,16 +25,16 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Boolean getRegister(User user) {
-
+    public int getRegister(User user) {
         int register = 0;
-        register = userDao.register(user);
-
-        if (register == 0) {
+        User getSelectName = userDao.login(user.getName());
+        if (getSelectName != null){
             throw new RuntimeException("用户名重复");
-        }else {
-            return true;
+        }else{
+            register = userDao.register(user);
         }
+        return register;
+
     }
 
 }
