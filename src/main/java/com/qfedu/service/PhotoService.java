@@ -8,5 +8,9 @@ import java.sql.SQLException;
 import java.util.Map;
 
 public interface PhotoService {
-    public  Map<Object,Object> query(int userid);//查询头像
+    Map<Object,Object> query(int userid);//查询头像
+    //插入头像信息
+    void save(int userid, String photoname);
+    //修改头像信息
+    void update(int userid, String photoname);
 }

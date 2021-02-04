@@ -36,4 +36,39 @@ public class PhotoServiceImpl implements PhotoService {
         }
         return map;
     }
+    //添加头像
+    @Override
+    public void save(int userid, String photoname) {
+
+        try {
+            Connection conn = ConnectionFactory.getInstance().makeConnection();
+            conn.setAutoCommit(false);
+            PhotoDaoImpl photoDao = new PhotoDaoImpl();
+            Picture picture = new Picture();
+            picture.setUserid(userid);
+            picture.setPhoto(photoname);
+            photoDao.save(conn,picture);
+            conn.commit();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    //修改头像
+    @Override
+    public void update(int userid, String photoname) {
+        try {
+            conn = ConnectionFactory.getInstance().makeConnection();
+            conn.setAutoCommit(false);
+            PhotoDaoImpl photoDao = new PhotoDaoImpl();
+            Picture picture = new Picture();
+            picture.setUserid(userid);
+            picture.setPhoto(photoname);
+            photoDao.update(conn,picture);
+            conn.commit();
+            conn.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
