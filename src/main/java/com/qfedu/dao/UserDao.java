@@ -19,4 +19,19 @@ public interface UserDao {
     int register(User user);
 
 
+
+    /**
+     * 根据ID寻找目标User
+     * @param id  前端获得的ID
+     * @return  返回一个User对象
+     */
+    User findUserById(String id);
+
+    /**
+     * 修改User对象的属性
+     * @param user  目标User
+     * @return  返回一个boolean值
+     */
+    int updateUser(User user);
+
 }
