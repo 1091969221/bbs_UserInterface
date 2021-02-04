@@ -33,6 +33,6 @@
 
     <!-- 加载映射文件 -->
     <mappers>
-
+        <mapper resource="com/qfedu/dao/UserMapper.xml"/>
     </mappers>
 </configuration>

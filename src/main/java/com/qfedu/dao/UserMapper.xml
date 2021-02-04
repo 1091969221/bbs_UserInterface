@@ -3,7 +3,17 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace 命名空间 必须是唯一的-->
 <mapper namespace="com.qfedu.dao.UserDao">
+
+
+
     <select id="login" parameterType="string" resultType="com.qfedu.entity.User">
         SELECT * FROM USER WHERE NAME=#{name}
     </select>
+
+    <insert id="register" parameterType="com.qfedu.entity.User" >
+        insert into user(name, password) values(#{name}, #{password})
+        <selectKey order="AFTER" keyProperty="userid" resultType="int">
+            select last_insert_id()
+        </selectKey>
+    </insert>
 </mapper>
