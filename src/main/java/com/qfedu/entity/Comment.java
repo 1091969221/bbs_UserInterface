@@ -7,7 +7,7 @@ public class Comment {
     private String pcontent;
     private Integer userid;
     private Integer byid;
-    private Timestamp   time;
+    private Timestamp time;
 
     public Integer getPid() {
         return pid;

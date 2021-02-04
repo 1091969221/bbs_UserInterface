@@ -81,6 +81,10 @@ CREATE TABLE `user` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`userid`)
 ) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+ALTER TABLE `user`
+DROP PRIMARY KEY,
+ADD PRIMARY KEY (`userid`, `name`);
+
 
 -- ----------------------------
 -- Records of user
