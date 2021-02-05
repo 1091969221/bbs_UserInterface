@@ -64,8 +64,8 @@
 <!----------------------------Header-end------------------------------------>
 
 <!----------------------- 登录、注册 ------------------------------->
-<jsp:include page="../Head/login/login.jsp"></jsp:include>
-<script type="text/javascript" src="Head/login/js/js.js"></script>
+<%--<jsp:include page="../Head/login/login.jsp"></jsp:include>--%>
+<%--<script type="text/javascript" src="Head/login/js/js.js"></script>--%>
 <!----------------------- 登录、注册-end ------------------------------->
 
 </div>
