@@ -1,4 +1,4 @@
-<%@page import="entity.User"%>
+<%@page import="com.qfedu.entity.User"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -51,7 +51,7 @@
 							<a href="#">${user.getName()}</a>
 							 <ul class="menu2">
 				                <li class="list2"><a href="myself/mycenter.jsp">个人主页</a></li>
-				                <li class="list2"><a href="Exit">退出</a></li>
+				                <li class="list2"><a href="ExitServlet">退出</a></li>
 				            </ul>	
 							</li>
 						</c:if>

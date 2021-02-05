@@ -3,7 +3,7 @@ package com.qfedu.service.impl;
 import com.qfedu.dao.impl.PhotoDaoImpl;
 import com.qfedu.entity.Picture;
 import com.qfedu.service.PhotoService;
-import com.qfedu.utils.ConnectionFactory;
+import com.qfedu.util.ConnectionFactory;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
