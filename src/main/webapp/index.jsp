@@ -18,7 +18,7 @@
     <link href="Head/images/favicon.ico" mce_href="Head/images/favicon.ico" rel='icon' type='image/x-icon'/>
 </head>
 <body>
-    <jsp:include page="head/head.jsp"></jsp:include>
+    <jsp:include page="Head/head.jsp"></jsp:include>
     <jsp:include page="content/content.jsp"></jsp:include>
 </body>
 </html>
