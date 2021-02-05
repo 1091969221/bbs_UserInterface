@@ -31,7 +31,7 @@ public class UserDaoImpl extends BaseDao implements UserDao {
 
 
     @Override
-    public User findUserById(String id) {
+    public User findUserById(int id) {
         String sql = "select * from user where userid = ?";
         Object[] obj = {id};
         User user = new User();
