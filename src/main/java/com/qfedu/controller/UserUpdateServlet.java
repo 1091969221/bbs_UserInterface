@@ -6,11 +6,13 @@ import com.qfedu.service.impl.UserServiceImpl;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-
+//修改用户的个人信息所用的Servlet
+@WebServlet("/UserUpdateServlet")
 public class UserUpdateServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -35,11 +37,11 @@ public class UserUpdateServlet extends HttpServlet {
         String family = req.getParameter("family");
         String intro = req.getParameter("intro");
 
-        User user1 = userService.findUserById(id);
+        User user1 = userService.findUserById(Integer.parseInt(id));
         //判断用户输入的旧密码是否正确
         if (user1.getPassword().equals(password)){
 //          根据获取到的id找到对应的User对象
-            User user = userService.findUserById(id);
+            User user = userService.findUserById(Integer.parseInt(id));
 //          继承新的个人信息
             user.setName(name);
             user.setPassword(password1);
