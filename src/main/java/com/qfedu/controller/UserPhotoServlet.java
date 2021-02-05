@@ -38,7 +38,7 @@ public class UserPhotoServlet extends HttpServlet {
         String pa = getServletContext().getRealPath("/");
         pa = pa.substring(0,pa.indexOf("\\.")).replace("\\","/");
         String th = request.getContextPath().replace("\\", "/");
-        String uploadPath = (pa + th) + "/WebContent/uploda";
+        String uploadPath = (pa + th) + "/picture/uploda";
         boolean isMultipart = ServletFileUpload.isMultipartContent(request);
         if (isMultipart == true) {
             try {
