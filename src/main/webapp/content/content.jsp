@@ -39,7 +39,7 @@
 
 </head>
 <!-- 调用方法获得所有发帖表信息，将其结果保存到list中 -->
-<c:set var="list" scope="session" value="${}"/>
+<c:set var="list" scope="session" value="${PostDaoTest.PostQuery()}"/>
 
 <body style="background-color:#f3f3f3;">
 <div class="all">
@@ -179,7 +179,6 @@
                     </td>
                 </tr>
             </table>
-            <br><br>
         </div>
     </div>
 </div>
